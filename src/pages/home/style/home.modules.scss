@@ -1,0 +1,36 @@
+@import '../../../global.scss';
+
+
+
+.logo{
+	width: 40%;
+	display: block;
+	margin: 1rem auto 1rem auto;
+}
+
+.Container{
+	
+	width: 100%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.logoContainer{
+	width: 50%;
+	margin: 1rem auto 1rem auto;
+}
+
+
+
+
+
+
+
+// Mobile Configurations
+@media (max-width: $phone)  {
+	.logo{
+		width: 80%;
+	}
+}

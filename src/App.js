@@ -8,15 +8,12 @@ import Home from './pages/home/js/home';
 
 // css
 import './app.scss'
-import size from './app.module.scss';
 
 
 
 
 
-const App = () => {
-  
-  
+const App = () => { 
   return (
     <div id="App">
         <AppBar />
