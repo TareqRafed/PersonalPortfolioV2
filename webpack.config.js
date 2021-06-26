@@ -2,6 +2,10 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devServer: {
+  host: '0.0.0.0',
+  useLocalIp: true,
+},
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
