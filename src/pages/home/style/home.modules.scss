@@ -2,35 +2,67 @@
 
 
 
-.logo{
-	width: 40%;
-	display: block;
-	margin: 1rem auto 1rem auto;
-}
-
 .Container{
 	
 	width: 100%;
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	height: 100vh;
+	padding-top: 10em;
 }
+
+
 
 .logoContainer{
-	width: 50%;
-	margin: 1rem auto 1rem auto;
+	
+	width: 20%;
+	margin: 0 auto 4em auto;
+}
+
+.textCenter{
+	text-align: center;
+}
+
+.inspect{
+	font-size: 2.5em;
+	text-decoration: underline;
 }
 
 
-
-
+.tutorial{
+	position: absolute;
+	bottom: 0;
+	right: 0%;
+	text-align: right;
+	margin: 3rem;
+}
 
 
 
 // Mobile Configurations
 @media (max-width: $phone)  {
-	.logo{
-		width: 80%;
+	.logoContainer{
+		width: 60%;
+		margin: 0 auto 5em auto;
+		
 	}
+	
+}
+
+
+// Tablet
+@media (min-width: $phone) and (max-width: $tablet)  {
+	.logoContainer{
+		width: 45%;
+		margin: 0 auto 8em auto;
+	}
+	
+}
+
+
+// small desktop
+@media (min-width: $tablet) and (max-width: $desktop)  {
+	.logoContainer{
+		width: 35%;
+		margin: 0 auto 6em auto;
+	}
+	
 }
