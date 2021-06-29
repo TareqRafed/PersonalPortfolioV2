@@ -12,9 +12,18 @@
 
 
 .logoContainer{
-	
 	width: 20%;
-	margin: 0 auto 4em auto;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.menu{
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .textCenter{
@@ -41,13 +50,10 @@
 @media (max-width: $phone)  {
 	.logoContainer{
 		width: 55%;
-		margin: 0 auto 2em auto;
-		
 	}
 	.tutorial{
 		margin: 1em;
 	}
-	
 }
 
 
@@ -55,9 +61,7 @@
 @media (min-width: $phone) and (max-width: $tablet)  {
 	.logoContainer{
 		width: 45%;
-		margin: 0 auto 4em auto;
 	}
-	
 }
 
 
@@ -65,7 +69,6 @@
 @media (min-width: $tablet) and (max-width: $desktop)  {
 	.logoContainer{
 		width: 35%;
-		margin: 0 auto 7em auto;
 	}
 	
 }
