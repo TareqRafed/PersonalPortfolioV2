@@ -2,8 +2,15 @@
 	width: 100%;
 }
 
-.keys{
+.keyImage{
+	width: 50px;
+	position: relative;
+	top: 10px;
+}
+
+.keysContainer{
 	float: right;
-	right: 10%;
-	margin: 3rem;
+	right: 5%;
+	margin: 2rem;
+	font-size: 40px;
 }

@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
-import Lottie from 'react-lottie';
-import * as animationData from '../../../animations/lottie/bg.json';
+import React from 'react';
+import { Lottie } from '@crello/react-lottie'
+import animationData from '../../../animations/lottie/bg.json';
 
 
 const Background = ({ children }) => {
@@ -15,7 +15,7 @@ const Background = ({ children }) => {
 	return (
 		<div>
 
-		<Lottie style={{position:"absolute", top:0}} isClickToPauseDisabled options={defaultOptions} />
+		<Lottie style={{position:"absolute", top:0}} height={"95vh"} config={defaultOptions} />
 		
 			{children}
 		</div>

@@ -16,7 +16,7 @@ import './app.scss'
 const App = () => { 
   return (
     <div id="App">
-        <AppBar />
+        <AppBar keys={1} />
         <Home />
     </div>
   );

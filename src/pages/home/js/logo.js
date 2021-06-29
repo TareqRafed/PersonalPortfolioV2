@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import Lottie from 'react-lottie';
-import * as animationData from '../../../animations/lottie/logo.json'
+import { Lottie } from '@crello/react-lottie'
+import animationData from '../../../animations/lottie/logo.json'
 
 
 const Logo = () => {
@@ -14,7 +14,7 @@ const Logo = () => {
 	};
 	return (
 		 <span onMouseEnter={()=>lottie.current.play()} onMouseLeave={() => lottie.current.stop()}>
-			<Lottie ref={lottie} options={defaultOptions} />
+			<Lottie animationRef={lottie} config={defaultOptions} />
 		 </span>
 		
 	);
