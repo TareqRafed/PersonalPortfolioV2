@@ -15,7 +15,7 @@ const Background = ({ children }) => {
 	return (
 		<div>
 
-		<Lottie style={{position:"absolute", top:0}} height={"95vh"} config={defaultOptions} />
+		<Lottie style={{position:"absolute", top:0, maxHeight: "-webkit-fill-available", zIndex:-100}} height={"95vh"} config={defaultOptions} />
 		
 			{children}
 		</div>
