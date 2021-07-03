@@ -1,10 +1,25 @@
 .messageContainer{
+	background-color: rgba(255, 255, 255, 0.062);
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.308);
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
 	z-index: 100;
+}
+
+.message{
+	background-color: rgb(255, 255, 255);
+	width: 50%;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 10px;
+	border: 1px solid black;
+	padding: 5%;
+	font-size: large;
+	font-family: Cairo;
 }

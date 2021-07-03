@@ -33,7 +33,7 @@ const Home = () => {
 				<div className={Style.textCenter}>Teleporter</div>
 			</div>
 			<div className={Style.tutorial}>Tutorial</div>
-			{ShowMessage && <Message />}
+			{ShowMessage && <Message setShow={setShowMessage} />}
 		</div>
 
 );
