@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Logo 
 import Logo from "./logo"
@@ -10,12 +10,16 @@ import Style from '../style/home.modules.scss';
 import BlinkingAnimation from '../../../animations/react-spring/blinking';
 
 //Background animation
-import Background from './bg'
+import Background from './bg';
+
+// Componenets
+import Message from './message';
 
 const Home = () => {
 
-	return (
+	const [ShowMessage, setShowMessage] = useState(false)
 
+	return (
 		<div className={Style.Container}>
 			<Background>
 				<div className={Style.logoContainer}><Logo /></div>
@@ -23,15 +27,16 @@ const Home = () => {
 			<div className={Style.menu}>
 				<BlinkingAnimation>
 					<div className={`${Style.textCenter} ${Style.inspect}`}>
-						<span className={Style.clickable}>Inspect</span>
+						<span onClick={()=> setShowMessage(true)} className={Style.clickable}>Inspect</span>
 					</div>
 				</BlinkingAnimation>
 				<div className={Style.textCenter}>Teleporter</div>
 			</div>
 			<div className={Style.tutorial}>Tutorial</div>
+			{ShowMessage && <Message />}
 		</div>
 
-	);
+);
 }
 
 
