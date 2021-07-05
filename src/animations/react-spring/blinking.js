@@ -8,7 +8,7 @@ const BlinkingAnimation = ({ children }) => {
     loop: { reverse: true },
     to: { opacity: 1 },
 
-    from: { opacity: 0 },
+    from: { opacity: 0.2 },
   });
 
   return <animated.div style={styles}>{children}</animated.div>;

@@ -1,25 +1,76 @@
-.messageContainer{
-	background-color: rgba(255, 255, 255, 0.062);
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	z-index: 100;
+@import "../../../global.scss";
+
+.messageContainer {
+  background-color: rgba(255, 255, 255, 0.918);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.message{
-	background-color: rgb(255, 255, 255);
-	width: 50%;
-	height: 80%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	border-radius: 10px;
-	border: 1px solid black;
-	padding: 5%;
-	font-size: large;
-	font-family: Cairo;
+.message {
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 6% 4% 4% 6%;
+  font-family: Cairo;
+  font-size: 25px;
+  display: inline;
+}
+
+.nextButton {
+  text-align: right;
+  text-decoration: underline;
+  cursor: pointer;
+  float: right;
+}
+
+.exit {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translate(-50%, -60%);
+  /* Below is for drawing a circle */
+  display: block;
+  height: 30px;
+  width: 30px;
+  line-height: 25px;
+  -moz-border-radius: 15px; /* or 50% */
+  border-radius: 15px; /* or 50% */
+  text-align: center;
+  font-size: 1em;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+// Mobile Configurations
+@media (max-width: $phone) {
+  .message {
+    font-size: 18px;
+    width: 90%;
+  }
+}
+
+// Tablet
+@media (min-width: $phone) and (max-width: $tablet) {
+  .message {
+    font-size: 18px;
+    width: 80%;
+  }
+}
+
+// small desktop
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .message {
+    font-size: 20px;
+    width: 70%;
+  }
 }
