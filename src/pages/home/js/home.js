@@ -20,6 +20,11 @@ const Home = () => {
 	const [ShowMessage, setShowMessage] = useState(false);
 	const [showTutorial, setshowTutorial] = useState(false);
 
+	const setPopUps = (val) => {
+		setShowMessage(val)
+		setshowTutorial(val)
+	}
+
 	return (
 		<div className={Style.Container}>
 			<Background>
@@ -34,7 +39,7 @@ const Home = () => {
 				<div className={Style.textCenter}>Teleporter</div>
 			</div>
 			<div onClick={()=>setshowTutorial(true)} className={Style.tutorial}>Tutorial</div>
-			{ShowMessage && <Message setShow={setShowMessage} />}
+			{(ShowMessage || showTutorial) && <Message tutorial={showTutorial} setShow={setPopUps} />}
 		</div>
 
 );
