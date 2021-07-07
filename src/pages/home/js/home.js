@@ -17,7 +17,8 @@ import Message from './message';
 
 const Home = () => {
 
-	const [ShowMessage, setShowMessage] = useState(false)
+	const [ShowMessage, setShowMessage] = useState(false);
+	const [showTutorial, setshowTutorial] = useState(false);
 
 	return (
 		<div className={Style.Container}>
@@ -32,7 +33,7 @@ const Home = () => {
 				</BlinkingAnimation>
 				<div className={Style.textCenter}>Teleporter</div>
 			</div>
-			<div className={Style.tutorial}>Tutorial</div>
+			<div onClick={()=>setshowTutorial(true)} className={Style.tutorial}>Tutorial</div>
 			{ShowMessage && <Message setShow={setShowMessage} />}
 		</div>
 
