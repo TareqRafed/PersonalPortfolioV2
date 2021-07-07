@@ -8,15 +8,15 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .message {
   background-color: rgb(255, 255, 255);
   width: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   border-radius: 10px;
   border: 1px solid black;
   padding: 6% 4% 4% 6%;
