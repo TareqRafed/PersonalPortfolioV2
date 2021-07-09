@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 
 //Componenets
 import AppBar from './components/appbar/js/appbar';
@@ -11,14 +11,18 @@ import './app.scss'
 
 
 
+export const KeysCtx = createContext(0);
 
 
-const App = () => { 
+const App = () => {
+  const [Keys, setKeys] = useState(0);
   return (
-    <div id="App">
-        <AppBar keys={1} />
+    <KeysCtx.Provider value={{Keys, setKeys}}>
+      <div id="App">
+        <AppBar keys={Keys} />
         <Home />
-    </div>
+      </div>
+    </KeysCtx.Provider>
   );
 };
 
