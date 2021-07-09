@@ -23,6 +23,7 @@
 	top: 80%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	width: 20%;
 }
 
 .textCenter{
@@ -30,6 +31,7 @@
 }
 
 .inspect{
+	margin-top: 2em;
 	font-size: 2.5em;
 	text-decoration: underline;
 }
@@ -45,6 +47,14 @@
 }
 
 
+.Portal{
+	margin: 1em auto 0 auto;
+	width: 20%;
+	svg {
+		width: 100%;
+	}
+}
+
 
 // Mobile Configurations
 @media (max-width: $phone)  {
@@ -54,6 +64,9 @@
 	.tutorial{
 		margin: 1em;
 	}
+	.menu{
+		width: 80%;
+	}
 }
 
 
@@ -62,6 +75,9 @@
 	.logoContainer{
 		width: 45%;
 	}
+	.menu{
+		width: 70%;
+	}
 }
 
 
@@ -69,6 +85,9 @@
 @media (min-width: $tablet) and (max-width: $desktop)  {
 	.logoContainer{
 		width: 35%;
+	}
+	.menu{
+		width: 50%;
 	}
 	
 }

@@ -14,6 +14,7 @@ import Background from './bg';
 
 // Componenets
 import Message from './message';
+import Portal from './portal';
 
 const Home = () => {
 
@@ -36,7 +37,7 @@ const Home = () => {
 						<span onClick={()=> setShowMessage(true)} className={Style.clickable}>Inspect</span>
 					</div>
 				</BlinkingAnimation>
-				<div className={Style.textCenter}>Teleporter</div>
+				<div className={`${Style.textCenter} ${Style.Portal}`}><Portal isLocked /></div>
 			</div>
 			<div onClick={()=>setshowTutorial(true)} className={Style.tutorial}>Tutorial</div>
 			{(ShowMessage || showTutorial) && <Message tutorial={showTutorial} setShow={setPopUps} />}

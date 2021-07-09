@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Style from '../style/tooltip.module.scss';
 import PropTypes from 'prop-types';
+import { createPortal } from "react-dom";
 
 
-
-// The parent element must be either a fullscreen absolute, or any other position 
-const Tooltip = ({children, tip}) => {
+const Tooltip = ({ children, tip, xOffset = -100 }) => {
 	const [ShowTip, setShowTip] = useState(false);
-	const [MousePos, setMousePos] = useState({"x":0, "y":0})
+	const [MousePos, setMousePos] = useState({ "x": 0, "y": 0 })
 	useEffect(() => {
-		if(!ShowTip) return
+		if (!ShowTip) return
 
 		console.log("render")
-		const handleMovment = (e) =>{
-			setMousePos({"x":e.screenX, "y":e.screenY})
+		const handleMovment = (e) => {
+			setMousePos({ "x": e.clientX, "y": e.clientY })
 		}
 		window.addEventListener("mousemove", handleMovment)
 
@@ -21,11 +20,12 @@ const Tooltip = ({children, tip}) => {
 			window.removeEventListener("mousemove", handleMovment);
 		}
 	}, [ShowTip])
-	return(
-		<span style={{cursor:"pointer"}} onMouseEnter={()=> setShowTip(true)} onMouseLeave={()=>setShowTip(false)}>
-			{ShowTip && <span id="tooltip" style={{left:MousePos.x, top:MousePos.y, transform:"translate(-100%,-400%)", zIndex:100}} className={Style.box}>{tip}</span>}
+	return (
+		<span style={{ cursor: "pointer" }} onMouseEnter={() => setShowTip(true)} onMouseLeave={() => setShowTip(false)}>
+			{ShowTip && createPortal(<span id="tooltip" style={{ left: MousePos.x, top: MousePos.y, transform: `translate(${xOffset}%,-100%)`, zIndex: 100 }} className={Style.box}>{tip}</span>, document.getElementById("root"))}
 			{children}
 		</span>
+		
 	);
 }
 
