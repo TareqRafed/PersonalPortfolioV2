@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 // Logo 
 import Logo from "./logo"
@@ -16,10 +16,15 @@ import Background from './bg';
 import Message from './message';
 import Portal from './portal';
 
+// CTX provider
+import { KeysCtx } from '../../../App';
+
 const Home = () => {
 
 	const [ShowMessage, setShowMessage] = useState(false);
 	const [showTutorial, setshowTutorial] = useState(false);
+
+	const { Keys } = useContext(KeysCtx);
 
 	const setPopUps = (val) => {
 		setShowMessage(val)
@@ -37,7 +42,7 @@ const Home = () => {
 						<span onClick={()=> setShowMessage(true)} className={Style.clickable}>Inspect</span>
 					</div>
 				</BlinkingAnimation>
-				<div className={`${Style.textCenter} ${Style.Portal}`}><Portal isLocked /></div>
+				<div className={`${Style.textCenter} ${Style.Portal}`}><Portal isLocked={Keys < 2} /></div>
 			</div>
 			<div onClick={()=>setshowTutorial(true)} className={Style.tutorial}>Tutorial</div>
 			{(ShowMessage || showTutorial) && <Message tutorial={showTutorial} setShow={setPopUps} />}

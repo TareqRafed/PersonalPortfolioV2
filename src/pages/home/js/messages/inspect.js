@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import BlinkingAnimation from "../../../../animations/react-spring/blinking";
 import Tooltip from "../../../../components/tooltip/js/tooltip";
-import Style from '../../style/message.modules.scss'
+import Style from '../../style/message.modules.scss';
 
 const Inspect = () => {
 	return (
@@ -14,7 +15,9 @@ const Inspect = () => {
 				Tariq<br />
 				<div className={Style.nextButton}>
 					<BlinkingAnimation>
-						Next
+						<Link to="/menu">
+							Next
+						</Link>
 					</BlinkingAnimation>
 				</div>
 		</>

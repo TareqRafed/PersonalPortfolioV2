@@ -9,6 +9,12 @@
    
 }
 
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: black;
+}
+
 @font-face { 
     font-family: Cairo;
     src: url('./fonts/Cairo-Light.ttf'); 

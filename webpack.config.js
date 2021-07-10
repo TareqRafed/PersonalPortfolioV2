@@ -6,11 +6,13 @@ module.exports = {
     host: '0.0.0.0',
     useLocalIp: true,
     contentBase: path.join(__dirname, 'src/public'),
+    historyApiFallback: true,
   },
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
