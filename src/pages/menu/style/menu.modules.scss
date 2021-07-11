@@ -1,0 +1,90 @@
+@use 'sass:math';
+@import "../../../global.scss";
+
+.Menu {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+// To keep the same ratio between different screens
+$height: 40vw;
+$width: 25vw;
+$fontSize: 22px;
+
+.card {
+  cursor: pointer;
+  position: relative;
+  width: math.div($width, 2);
+  height: math.div($height, 2);
+  background-color: white;
+
+  /* inner radius */
+  border: 1px solid #c6c6c6;
+  border-radius: 1vw;
+
+  /* outer radius */
+  box-shadow: 0 0 0 1vw #f8f7f3;
+
+  svg {
+    width: 50%;
+    max-height: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h2 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    font-size: $fontSize;
+    font-family: Cairo;
+    font-weight: lighter;
+  }
+}
+
+// Mobile Configurations
+@media (max-width: $phone) {
+  .card {
+    width: $width;
+    height: $height;
+    box-shadow: 0 0 0 2vw #f8f7f3;
+    h2 {
+      font-size: math.div($fontSize, 2);
+    }
+  }
+}
+
+// Tablet
+@media (min-width: $phone) and (max-width: $tablet) {
+  .card {
+    width: math.div($width, 1.25);
+    height: math.div($height, 1.25);
+    h2 {
+      font-size: math.div($fontSize, 1.25);
+    }
+  }
+}
+
+// small desktop
+@media (min-width: $tablet) and (max-width: $desktop) {
+  .card {
+    width: math.div($width, 1.5);
+    height: math.div($height, 1.5);
+    h2 {
+      font-size: math.div($fontSize, 1.5);
+    }
+  }
+}
