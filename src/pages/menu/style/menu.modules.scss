@@ -53,6 +53,14 @@ $fontSize: 22px;
     font-family: Cairo;
     font-weight: lighter;
   }
+
+  /* hover transition */
+  transition: transform ease-out 0.3s;
+  &:hover{
+	  transform: translate(0,-10%) scale(1.1);
+  }
+
+
 }
 
 // Mobile Configurations

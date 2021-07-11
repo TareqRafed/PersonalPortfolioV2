@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { useSpring, animated } from 'react-spring';
 import { KeysCtx } from '../../../App';
 
-// Style]
+// Style
 import Style from '../style/menu.modules.scss';
 
 //Svg
@@ -12,6 +13,7 @@ import Projects from '../../../assets/images/projects.svg'
 
 const Menu = () => {
 	const { Keys } = useContext(KeysCtx);
+
 	return (
 		<div className={Style.Menu}>
 			<div className={Style.container}>
