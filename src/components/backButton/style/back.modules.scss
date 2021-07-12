@@ -6,4 +6,8 @@
 	padding: 0.2em 2em 0.2em 2em;
 	font-size: large;
 	cursor: pointer;
+	&:hover{
+		background-color: black;
+		color: white;
+	}
 }

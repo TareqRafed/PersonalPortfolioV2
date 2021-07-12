@@ -21,6 +21,7 @@ const Menu = () => {
 				<div className={Style.card}><Projects /><h2>Projects</h2></div>
 				<div className={Style.card}><Contact /><h2>Contact</h2></div>
 			</div>
+			<h2>Choose your hero</h2>
 		</div>
 	);
 }
