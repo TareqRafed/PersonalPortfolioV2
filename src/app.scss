@@ -1,29 +1,28 @@
-
-
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: GloriaH;
-   
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: GloriaH;
 }
 
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
-    color: black;
+::selection {
+  background: #f8f7f3;
 }
 
-@font-face { 
-    font-family: Cairo;
-    src: url('./fonts/Cairo-Light.ttf'); 
-   } 
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: black;
+}
 
 @font-face {
-    font-family: GloriaH;
-    src: url('./fonts/GloriaHallelujah-Regular.ttf');
+  font-family: Cairo;
+  src: url("./fonts/Cairo-Light.ttf");
 }
 
-
-
+@font-face {
+  font-family: GloriaH;
+  src: url("./fonts/GloriaHallelujah-Regular.ttf");
+}
