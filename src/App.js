@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
+import FadeInOutTrans from './animations/react-spring/fadeInOutTrans';
 
 //Componenets
 import AppBar from './components/appbar/js/appbar';
@@ -23,20 +24,18 @@ export const KeysCtx = createContext(0);
 const App = () => {
   const [Keys, setKeys] = useState(0);
   return (
-    <Router>
-      <KeysCtx.Provider value={{ Keys, setKeys }}>
-        <div id="App">
-          <AppBar keys={Keys} />
-          <Switch>
-            <Route component={Home} exact path="/" />
-            <Route component={Menu} path="/menu" />
-            <Route component={Projects} path="/projects" />
-            <Route component={About} path="/about" />
-          </Switch>
-          <BackButton className={Style.backPos} />
-        </div>
-      </KeysCtx.Provider>
-    </Router>
+    <KeysCtx.Provider value={{ Keys, setKeys }}>
+      <div id="App">
+        <AppBar keys={Keys} />
+            <FadeInOutTrans>
+              <Route component={Home} exact path="/" />
+              <Route component={Menu} path="/menu" />
+              <Route component={Projects} path="/projects" />
+              <Route component={About} path="/about" />
+            </FadeInOutTrans>
+        <BackButton className={Style.backPos} />
+      </div>
+    </KeysCtx.Provider>
   );
 };
 

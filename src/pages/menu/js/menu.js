@@ -16,7 +16,7 @@ const Menu = () => {
 	// TODO : lock contact page
 	const { Keys } = useContext(KeysCtx);
 	return (
-		<div className={Style.Menu}>
+		<div className={`${Style.Menu} page`}>
 			<div className={Style.container}>
 				<FadeInTop>
 					<Link to="/about">

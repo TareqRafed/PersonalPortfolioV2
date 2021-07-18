@@ -11,7 +11,6 @@ import { useLocation } from 'react-router-dom';
 const BackButton = ({ className }) => {
 	const History = useHistory();
 	const location = useLocation();
-	console.log(location.pathname, "pathname")
 	return (location.pathname != "/" && <div className={`${Style.back} ${className}`} onClick={() => History.goBack()}> Back</div>);
 }
 

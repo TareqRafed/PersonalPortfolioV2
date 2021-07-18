@@ -32,7 +32,7 @@ const Home = () => {
 	}
 
 	return (
-		<div className={Style.Container}>
+		<div className={`${Style.Container} page`}>
 			<Background>
 				<div className={Style.logoContainer}><Logo /></div>
 			</Background>

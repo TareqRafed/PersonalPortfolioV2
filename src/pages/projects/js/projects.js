@@ -3,8 +3,10 @@ import ProjectsIcon from '../../../assets/images/projects.svg';
 import Style from '../style/projects.modules.scss'
 
 const Projects = () => {
-	return(
-		<div>
+
+
+	return (
+		<div className="page">
 			<div className={Style.projectsIconContainer}>
 				<ProjectsIcon />
 			</div>
