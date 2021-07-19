@@ -13,9 +13,9 @@
 .logoContainer{
 	width: 20%;
 	position: absolute;
-	top: 40%;
+	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%,25%);
 }
 
 .menu{
@@ -59,7 +59,7 @@
 // Mobile Configurations
 @media (max-width: $phone)  {
 	.logoContainer{
-		width: 55%;
+		width: 50%;
 	}
 	.tutorial{
 		margin: 1em;
@@ -73,7 +73,7 @@
 // Tablet
 @media (min-width: $phone) and (max-width: $tablet)  {
 	.logoContainer{
-		width: 45%;
+		width: 40%;
 	}
 	.menu{
 		width: 70%;
@@ -84,7 +84,7 @@
 // small desktop
 @media (min-width: $tablet) and (max-width: $desktop)  {
 	.logoContainer{
-		width: 35%;
+		width: 30%;
 	}
 	.menu{
 		width: 50%;

@@ -4,8 +4,7 @@ import { useTransition } from '@react-spring/core';
 import { animated } from '@react-spring/web';
 
 /*
-
-
+	This is a animated router component.
 */
 
 
