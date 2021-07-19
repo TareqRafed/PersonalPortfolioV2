@@ -25,7 +25,7 @@ const Background = ({ children }) => {
 
 	};
 	return (
-		<animated.div style={props}>
+		<animated.div style={{...props, position:"absolute", width:"100%", height:"100%"}}>
 
 		<Lottie style={{position:"absolute", top:0, maxHeight: "-webkit-fill-available", zIndex:-100}} height={"95vh"} config={defaultOptions} />
 		
