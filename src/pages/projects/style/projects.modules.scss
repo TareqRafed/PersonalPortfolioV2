@@ -1,18 +1,39 @@
 .projectsIconContainer {
-	height: 15rem;
-	svg{
-		height: 60%;
-		position: relative;
-		left: 50%;
-		transform: translate(-50%, 25%);
-	}
+  height: 15rem;
+  svg {
+    height: 60%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 25%);
+  }
 }
 
-.Project{
-	border-radius: 1rem;
-	width: 80%;
-	height: 15rem;
-	margin: 2rem auto;
-	border: 1px solid #f8f7f3;
-	cursor: pointer;
+.Project {
+  border-radius: 1rem;
+  width: 80%;
+  height: 15rem;
+  margin: 2rem auto;
+  border: 3px solid #f8f7f3;
+  cursor: pointer;
+  position: relative;
+  img {
+    max-height: 70%;
+    max-width: 40%;
+    margin-right: 5%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10%;
+    margin: auto;
+    display: inline-block;
+  }
+
+  h2,
+  p {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -100%);
+    margin-left: 5%;
+    width: 50%;
+  }
 }
