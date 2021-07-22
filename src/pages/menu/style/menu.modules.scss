@@ -2,8 +2,9 @@
 @import "../../../global.scss";
 
 .Menu {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  height: -webkit-fill-available;
   h2{
     position: absolute;
     left: 50%;
@@ -75,6 +76,7 @@ $fontSize: 22px;
   .Menu{
     h2{
       bottom: 20%;
+      font-size: 20px;
     }
   }
   .card {

@@ -10,15 +10,16 @@ import { animated } from "react-spring";
 const ProjectItem = ({ project }) => {
 
 	const [isHovered, setHoveringState] = useState(false);
-	const styles = useSpring({ opacity: isHovered ? 0.8 : 0})
+	const card = useSpring({ opacity: isHovered ? 0.8 : 0})
+	const imgPos = useSpring({ translateX: isHovered ? "-30%" : "0%"})
 
 
 	return (
 		<div onMouseEnter={() => setHoveringState(true)} onMouseLeave={() => setHoveringState(false)}
 			className={Style.Project} style={{ backgroundColor: `${project.themeColor}` }}>
 			<h2 style={{ color: `${project.fontColor}` }}>{project.name}</h2>
-			<animated.div style={styles} className={Style.cover} /> 
-			<img src={project.icon} alt={project.description} />
+			<animated.div style={card} className={Style.cover} /> 
+			<animated.img style={imgPos} src={project.icon} alt={project.description} />
 		</div>
 	);
 
