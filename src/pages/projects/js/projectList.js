@@ -1,5 +1,6 @@
 export const ProjectsList = [
 	{
+		id: 1,
 		"name": "DYNO",
 		"description": "DYNO - is an E-commerce shop to sell clothes in Amman",
 		"url": "",
@@ -8,6 +9,7 @@ export const ProjectsList = [
 		"fontColor" : "#1D363A"
 	},
 	{
+		id: 2,
 		"name": "MoGallery",
 		"description": "MoGallery - Reserve your favorite photographer for a photo session.",
 		"url": "https://mogalleryjo.com",
@@ -16,6 +18,7 @@ export const ProjectsList = [
 		"fontColor" : "#FFFFFF"
 	},
 	{
+		id: 3,
 		"name": "Asr3 Mshmsh",
 		"description": "Mshmsh - Food & Goods delivery app",
 		"url": "https://apps.apple.com/jo/app/mshmsh/id1527355433",
@@ -24,6 +27,7 @@ export const ProjectsList = [
 		"fontColor":"#FA9404"
 	},
 	{
+		id: 4,
 		"name": "Sticky Ball",
 		"description": "Sticky ball - 2D multiplayer game for mobile phone.",
 		"url": "",
