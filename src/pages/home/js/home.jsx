@@ -9,7 +9,7 @@ import Style from '../style/home.modules.scss';
 // react-spring Animations
 import BlinkingAnimation from '../../../animations/react-spring/blinking';
 
-//Background animation
+// Background animation
 import Background from './bg';
 
 // Componenets
@@ -17,18 +17,18 @@ import Message from './message';
 import Portal from './portal';
 
 // CTX provider
-import { KeysCtx } from '../../../App';
+import KeysCtx from '../../../context/keys';
 
 const Home = () => {
 
-	const [ShowMessage, setShowMessage] = useState(false);
-	const [showTutorial, setshowTutorial] = useState(false);
+	const [showMessage, setShowMessage] = useState(false);
+	const [showTutorial, setShowTutorial] = useState(false);
 
 	const { Keys } = useContext(KeysCtx);
 
 	const setPopUps = (val) => {
 		setShowMessage(val)
-		setshowTutorial(val)
+		setShowTutorial(val)
 	}
 
 	return (
@@ -44,8 +44,8 @@ const Home = () => {
 				</BlinkingAnimation>
 				<div className={`${Style.textCenter} ${Style.Portal}`}><Portal isLocked={Keys < 2} /></div>
 			</div>
-			<div onClick={()=>setshowTutorial(true)} className={Style.tutorial}>Tutorial</div>
-			{(ShowMessage || showTutorial) && <Message tutorial={showTutorial} setShow={setPopUps} />}
+			<div onClick={()=>setShowTutorial(true)} className={Style.tutorial}>Tutorial</div>
+			{(showMessage || showTutorial) && <Message tutorial={showTutorial} setShow={setPopUps} />}
 		</div>
 
 );

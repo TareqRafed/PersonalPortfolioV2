@@ -9,7 +9,7 @@ const Logo = () => {
 	const defaultOptions = {
 		loop: false,
 		autoplay: false,
-		animationData: animationData,
+		animationData,
 
 	};
 	return (

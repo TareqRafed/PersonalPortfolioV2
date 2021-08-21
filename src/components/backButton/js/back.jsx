@@ -1,7 +1,7 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import PropTypes from 'prop-types';
+import { useLocation, useHistory } from 'react-router-dom';
 import Style from '../style/back.modules.scss';
-import { useLocation } from 'react-router-dom';
 
 /*
 	button to get to the previous page, shows up only if you were not on the homepage
@@ -11,7 +11,11 @@ import { useLocation } from 'react-router-dom';
 const BackButton = ({ className }) => {
 	const History = useHistory();
 	const location = useLocation();
-	return (location.pathname != "/" && <div className={`${Style.back} ${className}`} onClick={() => History.goBack()}> Back</div>);
+	return (location.pathname !== "/" && <div className={`${Style.back} ${className}`} onClick={() => History.goBack()}> Back</div>);
+}
+
+BackButton.propTypes = {
+	className: PropTypes.string.isRequired,
 }
 
 export default BackButton;

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { ProjectsList } from '../../projects/js/projectList';
+import ProjectsList from '../../projects/js/projectList';
 
 
 
 const ProjectDetails = () => {
 	const { id } = useParams();
-	const project = ProjectsList.find((project) => project.id == parseInt(id));
+	const project = ProjectsList.find((Project) => Project.id === parseInt(id, 10));
 
 	if (project) {
 		return (

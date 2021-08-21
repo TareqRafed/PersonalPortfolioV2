@@ -8,7 +8,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'src/public'),
     historyApiFallback: true,
   },
-  entry: "./src/index.js",
+  entry: "./src/index.jsx",
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
@@ -22,6 +22,7 @@ module.exports = {
     fallback: {
       "fs": false
     },
+    extensions: ['', '.js', '.jsx'],
   },
   module: {
 
@@ -74,7 +75,7 @@ module.exports = {
           options: {
             name: '[hash].[ext]',
             outputPath: 'css/',
-            publicPath: url => '../css/' + url
+            publicPath: url => `../css/${  url}`
           }
         },
       ],

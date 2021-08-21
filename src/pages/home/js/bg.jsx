@@ -1,18 +1,18 @@
 import React from 'react';
 import { Lottie } from '@crello/react-lottie'
-import animationData from '../../../animations/lottie/bg.json';
 import { useSpring } from '@react-spring/core';
 import { animated } from '@react-spring/web';
+import animationData from '../../../animations/lottie/bg.json';
 
 
 const Background = ({ children }) => {
 
 	const props = useSpring({
 		from: {
-			transform:'scale(0)'
+			transform: 'scale(0)'
 		},
 		to: {
-			transform:'scale(1)',
+			transform: 'scale(1)',
 		},
 
 	});
@@ -21,14 +21,14 @@ const Background = ({ children }) => {
 	const defaultOptions = {
 		loop: true,
 		autoplay: true,
-		animationData: animationData,
+		animationData,
 
 	};
 	return (
-		<animated.div style={{...props, position:"absolute", width:"100%", height:"100%"}}>
+		<animated.div style={{ ...props, position: "absolute", width: "100%", height: "100%" }}>
 
-		<Lottie style={{position:"absolute", top:0, maxHeight: "-webkit-fill-available", zIndex:-100}} height={"95vh"} config={defaultOptions} />
-		
+			<Lottie style={{ position: "absolute", top: 0, maxHeight: "-webkit-fill-available", zIndex: -100 }} height="95vh" config={defaultOptions} />
+
 			{children}
 		</animated.div>
 	);

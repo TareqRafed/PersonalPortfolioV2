@@ -1,4 +1,4 @@
-export const ProjectsList = [
+const ProjectsList = [
 	{
 		id: 1,
 		"name": "DYNO",
@@ -36,3 +36,5 @@ export const ProjectsList = [
 		"fontColor" : "#D72F2F"
 	},
 ];
+
+export default ProjectsList;

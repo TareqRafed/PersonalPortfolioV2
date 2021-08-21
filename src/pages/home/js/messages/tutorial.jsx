@@ -1,12 +1,10 @@
 import React from "react";
 
-const Tutorial = () => {
-	return(
+const Tutorial = () => (
 		<div>
 			Lorem Ipsum
 		</div>
-	);
-}
+	)
 
 
 export default Tutorial

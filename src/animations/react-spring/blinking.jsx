@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { useSpring } from "@react-spring/core";
 import { animated, config } from "react-spring";
 
@@ -13,5 +14,9 @@ const BlinkingAnimation = ({ children }) => {
 
   return <animated.div style={styles}>{children}</animated.div>;
 };
+
+BlinkingAnimation.propTypes = {
+  children: PropTypes.element.isRequired,
+}
 
 export default BlinkingAnimation;

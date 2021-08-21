@@ -24,9 +24,9 @@ const FadeWithMovement = ({ children, fromX = "0%", toX = "0%", fromY ="0%", toY
 export default FadeWithMovement;
 
 FadeWithMovement.propTypes = {
-	children: PropTypes.any.isRequired,
-	fromX: PropTypes.string,
-	toX: PropTypes.string,
-	fromY: PropTypes.string,
-	toY: PropTypes.string,
+	children: PropTypes.element.isRequired,
+	fromX: PropTypes.string.isRequired,
+	toX: PropTypes.string.isRequired,
+	fromY: PropTypes.string.isRequired,
+	toY: PropTypes.string.isRequired,
 }

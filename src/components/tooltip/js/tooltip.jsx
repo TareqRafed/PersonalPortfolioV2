@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import Style from '../style/tooltip.module.scss';
 import PropTypes from 'prop-types';
 import { createPortal } from "react-dom";
+import Style from '../style/tooltip.module.scss';
 
 
 const Tooltip = ({ children, tip, xOffset = -100 }) => {
 	const [ShowTip, setShowTip] = useState(false);
 	const [MousePos, setMousePos] = useState({ "x": 0, "y": 0 })
 	useEffect(() => {
-		if (!ShowTip) return
+		if (!ShowTip) return {}
 
-		console.log("render")
+		// console.log("render")
 		const handleMovment = (e) => {
 			setMousePos({ "x": e.clientX, "y": e.clientY })
 		}
 		window.addEventListener("mousemove", handleMovment)
 
-		return () => {
-			window.removeEventListener("mousemove", handleMovment);
-		}
+		return () => { window.removeEventListener("mousemove", handleMovment); }
 	}, [ShowTip])
 	return (
 		<span style={{ cursor: "pointer" }} onMouseEnter={() => setShowTip(true)} onMouseLeave={() => setShowTip(false)}>
@@ -29,9 +27,10 @@ const Tooltip = ({ children, tip, xOffset = -100 }) => {
 	);
 }
 
-Tooltip.protoTypes = {
+Tooltip.propTypes = {
 	tip: PropTypes.string.isRequired,
-	children: PropTypes.any.isRequired
+	children: PropTypes.element.isRequired,
+	xOffset: PropTypes.number.isRequired,
 }
 
 

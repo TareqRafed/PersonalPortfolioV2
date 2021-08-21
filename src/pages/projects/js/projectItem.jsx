@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Style from '../style/projects.modules.scss';
 import { useSpring } from "@react-spring/core";
 import { animated } from "react-spring";
 import { Link } from 'react-router-dom';
+import Style from '../style/projects.modules.scss';
 
 
 const ProjectItem = ({ project }) => {
@@ -42,7 +42,7 @@ const ProjectItem = ({ project }) => {
 
 
 ProjectItem.propTypes = {
-	project: PropTypes.object.isRequired
+	project: PropTypes.node.isRequired
 }
 
 
