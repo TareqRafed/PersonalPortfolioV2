@@ -4,7 +4,6 @@ import KeysCtx from './context/keys';
 import FadeInOutTrans from "./animations/react-spring/fadeInOutTrans";
 
 // Componenets
-import AppBar from "./components/appbar/js/appbar";
 import BackButton from "./components/backButton/js/back";
 
 // Pages
@@ -25,7 +24,6 @@ const App = () => {
   return (
     <KeysCtx.Provider value={{ Keys, setKeys }}>
       <div id="App">
-        <AppBar keys={Keys} />
         <FadeInOutTrans>
           <Route component={Home} exact path="/" />
           <Route component={Menu} path="/menu" />

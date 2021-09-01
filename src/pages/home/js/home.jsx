@@ -1,55 +1,72 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from "react";
 
-// Logo 
-import Logo from "./logo"
+// App config
+import AppConfig from '../../../app.config';
+
+// Logo
+import Logo from "./logo";
 
 // Style
-import Style from '../style/home.modules.scss';
-
-// react-spring Animations
-import BlinkingAnimation from '../../../animations/react-spring/blinking';
+import Style from "../style/home.modules.scss";
 
 // Background animation
-import Background from './bg';
-
-// Componenets
-import Message from './message';
-import Portal from './portal';
+import BubblesAnimation from "./BubblesAnimation";
 
 // CTX provider
-import KeysCtx from '../../../context/keys';
+import KeysCtx from "../../../context/keys";
+import Inspect from "./homeMessage";
+
+// Icons
+import KeyIcon from '../../../assets/images/key.svg';
+import Tooltip from "../../../components/tooltip/js/tooltip";
+import LockIcon from '../../../assets/images/lock.svg';
 
 const Home = () => {
 
-	const [showMessage, setShowMessage] = useState(false);
-	const [showTutorial, setShowTutorial] = useState(false);
+  const { Keys } = useContext(KeysCtx);
 
-	const { Keys } = useContext(KeysCtx);
 
-	const setPopUps = (val) => {
-		setShowMessage(val)
-		setShowTutorial(val)
-	}
-
-	return (
-		<div className={`${Style.Container} page`}>
-			<Background>
-				<div className={Style.logoContainer}><Logo /></div>
-			</Background>
-			<div className={Style.menu}>
-				<BlinkingAnimation>
-					<div className={`${Style.textCenter} ${Style.inspect}`}>
-						<span onClick={()=> setShowMessage(true)} className={Style.clickable}>Inspect</span>
-					</div>
-				</BlinkingAnimation>
-				<div className={`${Style.textCenter} ${Style.Portal}`}><Portal isLocked={Keys < 2} /></div>
-			</div>
-			<div onClick={()=>setShowTutorial(true)} className={Style.tutorial}>Tutorial</div>
-			{(showMessage || showTutorial) && <Message tutorial={showTutorial} setShow={setPopUps} />}
-		</div>
-
-);
-}
-
+  return (
+    <div className={`${Style.Container} page`}>
+      <div className={Style.appBar}>
+        <div className={Style.headerText}>
+          <div>
+            <div className={Style.headerMain}>Tariq Rafid</div>
+            <div className={Style.headerSecondary}>
+              Software Engineer Based in Amman
+            </div>
+          </div>
+        </div>
+        <div className={Style.logoContainer}>
+          <BubblesAnimation height="100%">
+            <Logo />
+          </BubblesAnimation>
+        </div>
+      </div>
+      <div className={Style.main}>
+        <div className={Style.leftColumn}>
+          <Inspect />
+        </div>
+        <div className={Style.rightColumn}>
+          <ul>
+            <li>
+              <Tooltip tip={`You have ${Keys} Keys`}>
+                <KeyIcon />
+              </Tooltip>
+              </li>
+            <li>
+              <Tooltip tip={`You need at least ${AppConfig.KEYS_TO_UNLOCK_MAIN_LOCK} Key(s) to unlock this!`}>
+                <LockIcon />
+              </Tooltip>
+            </li>
+            <li>
+              WTF!?
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Home;

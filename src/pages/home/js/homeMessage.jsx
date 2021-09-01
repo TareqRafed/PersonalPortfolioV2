@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BlinkingAnimation from "../../../../animations/react-spring/blinking";
-import Tooltip from "../../../../components/tooltip/js/tooltip";
-import Style from "../../style/message.modules.scss";
+import BlinkingAnimation from "../../../animations/react-spring/blinking";
+import Tooltip from "../../../components/tooltip/js/tooltip";
+import Style from "../style/homeMessage.module.scss";
 
 
 // TODO: Change hard coded text
-const Inspect = () => (
-  <>
+const HomeMessage = () => (
+  <div className={Style.homeMessage}>
     Hey Stranger,
     <br />
     a Software Engineer here,
@@ -25,10 +25,10 @@ const Inspect = () => (
     <br />
     <div className={Style.nextButton}>
       <BlinkingAnimation>
-        <Link to="/menu">Next</Link>
+        <Link to="/menu">Start your journey</Link>
       </BlinkingAnimation>
     </div>
-  </>
+  </div>
 );
 
-export default Inspect;
+export default HomeMessage;
