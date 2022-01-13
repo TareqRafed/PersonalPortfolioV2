@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ProjectsList from '../../projects/js/projectList';
+import ProjectsList from '../../Projects/js/projectList';
 
 
 

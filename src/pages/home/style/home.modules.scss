@@ -22,13 +22,21 @@
 	flex: 3;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	color: #898989;
 	>div>div{
 		font-family: Cairo;
 		font-weight: 500;
 		font-size: 2.5rem;
 	}
+	>div {
+		padding-left: 2rem;
+	}
+}
+
+.accent {
+	font-weight: 800;
+	font-size: small;
 }
 
 .logoContainer{

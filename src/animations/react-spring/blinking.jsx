@@ -1,9 +1,9 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { useSpring } from "@react-spring/core";
 import { animated, config } from "react-spring";
 
-const BlinkingAnimation = ({ children }) => {
+const Blinking = ({ children }) => {
   const styles = useSpring({
     config: config.molasses,
     loop: { reverse: true },
@@ -15,8 +15,8 @@ const BlinkingAnimation = ({ children }) => {
   return <animated.div style={styles}>{children}</animated.div>;
 };
 
-BlinkingAnimation.propTypes = {
+Blinking.propTypes = {
   children: PropTypes.element.isRequired,
-}
+};
 
-export default BlinkingAnimation;
+export default Blinking;

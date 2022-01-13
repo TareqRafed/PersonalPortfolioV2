@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Lock from "../../../assets/images/lock.svg";
-import Tooltip from "../../../components/tooltip/js/tooltip";
+import Tooltip from "../../../components/Tooltip/js/Tooltip";
 import Key from "../../../assets/images/key.svg";
 
 const Portal = ({ isLocked }) => (

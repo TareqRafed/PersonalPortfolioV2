@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 
 // App config
-import AppConfig from '../../../app.config';
+import AppConfig from "../../../app.config";
 
 // Logo
-import Logo from "./logo";
+import Logo from "./Logo";
 
 // Style
 import Style from "../style/home.modules.scss";
@@ -14,17 +14,15 @@ import BubblesAnimation from "./BubblesAnimation";
 
 // CTX provider
 import KeysCtx from "../../../context/keys";
-import Inspect from "./homeMessage";
+import Inspect from "./HomeMessage";
 
 // Icons
-import KeyIcon from '../../../assets/images/key.svg';
-import Tooltip from "../../../components/tooltip/js/tooltip";
-import LockIcon from '../../../assets/images/lock.svg';
+import KeyIcon from "../../../assets/images/key.svg";
+import Tooltip from "../../../components/Tooltip/js/Tooltip";
+import LockIcon from "../../../assets/images/lock.svg";
 
 const Home = () => {
-
   const { Keys } = useContext(KeysCtx);
-
 
   return (
     <div className={`${Style.Container} page`}>
@@ -33,7 +31,8 @@ const Home = () => {
           <div>
             <div className={Style.headerMain}>Tariq Rafid</div>
             <div className={Style.headerSecondary}>
-              Software Engineer Based in Amman
+              Software Engineer{" "}
+              <span className={Style.accent}>Based in Amman</span>
             </div>
           </div>
         </div>
@@ -53,15 +52,15 @@ const Home = () => {
               <Tooltip tip={`You have ${Keys} Keys`}>
                 <KeyIcon />
               </Tooltip>
-              </li>
+            </li>
             <li>
-              <Tooltip tip={`You need at least ${AppConfig.KEYS_TO_UNLOCK_MAIN_LOCK} Key(s) to unlock this!`}>
+              <Tooltip
+                tip={`You need at least ${AppConfig.KEYS_TO_UNLOCK_MAIN_LOCK} Key(s) to unlock this!`}
+              >
                 <LockIcon />
               </Tooltip>
             </li>
-            <li>
-              WTF!?
-            </li>
+            <li>WTF!?</li>
           </ul>
         </div>
       </div>

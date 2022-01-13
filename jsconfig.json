@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "~/*": ["src/*"],
+            "@root/*": ["src/*"],
+            "@app/*": ["src/App/*"],
+            "@pages/*": ["src/pages/*"],
+            "@context/*": ["src/context/*"],
+            "@components/*": ["src/components/*"],
+            "@assets/*": ["src/assets/*"],
+            "@animations/*": ["src/animations/*"],
+        }
+    },
+    "exclude": ["node_modules", "dist"]
+}
