@@ -66,6 +66,7 @@ $fontSize: 22px;
   &:hover{
 	  transform: translate(0,-10%) scale(1.1);
     background-color: hsl(48, 26%, 98%);
+    box-shadow: 0 0 0 1vw #f8f7f3, rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   }
 
 

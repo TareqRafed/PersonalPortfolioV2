@@ -17,6 +17,8 @@
     "@lottiefiles/lottie-player": "^1.0.3",
     "@react-spring/core": "^9.2.4",
     "@react-spring/web": "^9.2.4",
+    "@react-three/drei": "^8.4.0",
+    "@react-three/fiber": "^7.0.26",
     "i18next": "^21.6.4",
     "node-sass": "^6.0.1",
     "path": "^0.12.7",
@@ -25,7 +27,8 @@
     "react-dom": "^17.0.1",
     "react-i18next": "^11.15.2",
     "react-router-dom": "^5.2.0",
-    "react-spring": "^9.1.1"
+    "react-spring": "^9.1.1",
+    "three": "^0.139.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
